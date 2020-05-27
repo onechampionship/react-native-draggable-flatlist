@@ -9,7 +9,20 @@ To use swipeable list items in a DraggableFlatList see [React Native Swipeable I
 ## Install
 
 1. Follow installation instructions for [reanimated](https://github.com/kmagiera/react-native-reanimated) and [react-native-gesture-handler](https://github.com/kmagiera/react-native-gesture-handler). RNGH requires you to make changes to `MainActivity.java`. Be sure to [follow all Android instructions!](https://software-mansion.github.io/react-native-gesture-handler/docs/getting-started.html#android)
-2. `npm install` or `yarn add` `react-native-draggable-flatlist`
+2. Install this package using `npm` or `yarn`
+
+with `npm`:
+
+```
+npm install --save react-native-draggable-flatlist
+```
+
+with `yarn`:
+
+```
+yarn add react-native-draggable-flatlist
+```
+
 3. `import DraggableFlatList from 'react-native-draggable-flatlist'`
 
 ## Api
@@ -33,6 +46,7 @@ All props are spread onto underlying [FlatList](https://facebook.github.io/react
 | `animationConfig`       | `Partial<Animated.SpringConfig>`                                                          | Configure list animations. See [reanimated spring config](https://github.com/software-mansion/react-native-reanimated/blob/master/react-native-reanimated.d.ts#L112-L120)          |
 | `activationDistance`    | `number`                                                                                  | Distance a finger must travel before the gesture handler activates. Useful when using a draggable list within a TabNavigator so that the list does not capture navigator gestures. |
 | `layoutInvalidationKey` | `string`                                                                                  | Changing this value forces a remeasure of all item layouts. Useful if item size/ordering updates after initial mount.                                                              |
+| `onScrollOffsetChange`  | `(offset: number) => void`                                                                | Called with scroll offset. Stand-in for `onScroll`.                                                                                                                                |
 
 ## Example
 
